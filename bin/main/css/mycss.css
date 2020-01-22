@@ -2,5 +2,41 @@
 *{
 	margin:0;
 	padding:0;
-	color:red;
+}
+ul{
+  list-style: none;
+}
+#header{
+  width: 1158px;
+  margin: 0 auto;
+}
+
+.top-area{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.top-info{
+  display: flex;
+  justify-content: center;
+}
+.top-info li{
+  margin-right: 14px;
+}
+
+.middle-area{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.main-logo{
+  width: 600px;
+  height: 100px;
+  margin: 0 auto;
+}
+.bottom-info{
+  display: flex;
+  justify-content: space-around;
 }
