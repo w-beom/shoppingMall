@@ -2,5 +2,22 @@
 *{
 	margin:0;
 	padding:0;
-	color:red;
+}
+ul{
+  list-style: none;
+}
+#header{
+  width: 1158px;
+}
+.top-area{
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-info{
+  display: flex;
+  justify-content: center;
+}
+.top-info li{
+  margin-right: 14px;
 }
