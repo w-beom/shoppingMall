@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
   <title>Insert title here</title>
-  <link rel="stylesheet" type="text/css" href="../css/mycss.css">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
 </head>
 
 <body>
   <div id="header">
     <div class="top-area">
-      <div class="small-logo">
-        요기는 로고
-      </div>
       <div class="top-div">
         <ul class="top-info">
-          <li>회원가입</li>
-          <li>로그인</li>
-          <li>마이페이지</li>
-          <li>장바구니</li>
-          <li>개인결제</li>
-          <li>문의하기</li>
+          <li><a href="signup.do">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">마이페이지</a></li>
+          <li><a href="#">장바구니</a></li>
+          <li><a href="#">개인결제</a></li>
+          <li><a href="#">문의하기</a></li>
         </ul>
       </div>
     </div>
     <div class="middle-area">
       <div class="main-logo">
-      <img src="http://nibbuns.co.kr/design/piasom/img/logo.png">
+      <a href="#"><img src="http://nibbuns.co.kr/design/piasom/img/logo.png"></a>
       </div>
       <div class="btn-search">
         <input type="text" placeholder="검색">
@@ -35,18 +32,18 @@
     </div>
     <div class="bottom-area">
       <ul class="bottom-info">
-        <li>NEW 5%</li>
-        <li>BEST50</li>
-        <li>TOP</li>
-        <li>BLOUSE&SHIRT</li>
-        <li>DRESS</li>
-        <li>PANTS</li>
-        <li>SKIRT</li>
-        <li>OUTER</li>
-        <li>BAG&SHOES</li>
-        <li>ACC</li>
-        <li>INNER&SEASON</li>
-        <li>SALE</li>
+        <li><a href="#">NEW 5%</a></li>
+        <li><a href="#">BEST50</a></li>
+        <li><a href="#">TOP</a></li>
+        <li><a href="#">BLOUSE&SHIRT</a></li>
+        <li><a href="#">DRESS</a></li>
+        <li><a href="#">PANTS</a></li>
+        <li><a href="#">SKIRT</a></li>
+        <li><a href="#">OUTER</a></li>
+        <li><a href="#">BAG&SHOES</a></li>
+        <li><a href="#">ACC</a></li>
+        <li><a href="#">INNER&SEASON</a></li>
+        <li><a href="#">SALE</a></li>
       </ul>
     </div>
   </div>

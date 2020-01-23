@@ -10,7 +10,7 @@
 <script th:src="@{/js/slider2.js}"></script>
 </head>
 <body>
-<head th:replace="header"></head>
+<header th:include="header"></header>
 <main>
 	<div class="main-wrap">
 		<div class="visual">
@@ -39,6 +39,6 @@
 
 	</div>
 </main>
-<head th:replace="footer"></head>
+<footer th:include="footer"></footer>
 </body>
 </html>
