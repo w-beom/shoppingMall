@@ -4,9 +4,41 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script th:src="@{/js/slider.js}"></script>
+<script th:src="@{/js/slider2.js}"></script>
 </head>
 <body>
 <head th:replace="header"></head>
+<main>
+	<div class="main-wrap">
+		<div class="visual">
+			<ul class="visual-img">
+				<li><div></div></li>
+				<li><div></div></li>
+				<li><div></div></li>
+			</ul>
+		</div>
+		<div class="box">
+		<div class="left-box">
+			<ul>
+				<li><a href="#"><img src="http://www.nibbuns.co.kr/design/piasom/img/mid__01.png"></a></li>
+				<li><a href="#"><img src="http://www.nibbuns.co.kr/design/piasom/img/mid__02.png"></a></li>
+			</ul>
+			<ul>
+				<li><a href="#"><img src="http://www.nibbuns.co.kr/design/piasom/img/mid__04.png"></a></li>
+				<li><a href="#"><img src="http://www.nibbuns.co.kr/design/piasom/img/mid__05.png"></a></li>
+				<li><a href="#"><img src="http://www.nibbuns.co.kr/design/piasom/img/mid__06.png"></a></li>
+			</ul>
+			</div>
+		<div class="right-box">
+		<a href="#"><img src="http://www.nibbuns.co.kr/design/piasom/img/mid__03.png"></a>
+		</div>
+		</div>
+
+	</div>
+</main>
 <head th:replace="footer"></head>
 </body>
 </html>
