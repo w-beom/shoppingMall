@@ -14,9 +14,7 @@ ul{
 .top-area{
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
 }
-
 .top-info{
   display: flex;
   justify-content: center;
@@ -26,15 +24,20 @@ ul{
 }
 
 .middle-area{
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+	width:100%;
 }
 
 .main-logo{
   width: 600px;
-  height: 100px;
-  margin: 0 auto;
+  height: 30px;
+  margin:30px auto 30px auto;
+  display: flex;
+  justify-content: center;
+}
+.btn-search{
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 30px;
 }
 .bottom-info{
   display: flex;
@@ -74,6 +77,7 @@ ul{
 	margin-bottom:10px;
 }
 .right-box img{
+	width:110%;
 	height:613px;
 }
 /*------------------------ footer----------------- */
