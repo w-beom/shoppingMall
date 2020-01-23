@@ -31,6 +31,9 @@ a{
 .top-info{
   display: flex;
 }
+.top-info a{
+	font-size: 13px;
+}
 .top-info a:hover{
 	color:#07f;
 }
