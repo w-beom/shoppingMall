@@ -8,7 +8,6 @@
 </head>
 
 <body>
-<<<<<<< Updated upstream
 	<header th:include="header"></header>
 	<div class="signup-wrap">
 		<div class="userInfo-wrap">
@@ -23,9 +22,9 @@
 					<li><input type="password" placeholder="비밀번호 확인"></li>
 					<li><input type="email" placeholder="이메일"></li>
 					<li><select>
-							<th:each="num: ${#numbers.sequence(1920,2020)}">
-								<option value="${num}">1</option>
-							</th:each>
+							<th:block th:each="num:${#numbers.sequence(1920,2020)}">
+								<option value="${num}">${num}</option>
+							</th:block>
 					</select>년 <select>
 							<option value="1">1</option>
 							<option value="2">2</option>
@@ -45,55 +44,3 @@
 	<footer th:include="footer"></footer>
 </body>
 </html>
-=======
-  <div class="signup-wrap">
-    <div class="userInfo-wrap">
-      <h1 class="userInfo">회원정보 입력</h1>
-    </div>
-    <div class="join-wrap">
-      <form class="join" method="post">
-        <ul class="join-form">
-          <li>
-            <input type="text" placeholder="이름">
-          </li>
-          <li>
-            <input type="text" placeholder="아이디">
-          </li>
-          <li>
-            <input type="password" placeholder="비밀번호">
-          </li>
-          <li>
-            <input type="password" placeholder="비밀번호 확인">
-          </li>
-          <li>
-            <input type="email" placeholder="이메일">
-
-          </li>
-          <li>
-            <select>
-              <th:block th:each="num:${#numbers.sequence(1920,2020)}">
-              <option value="${num}">${num}</option>
-              </th:block>
-            </select>년
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>월
-            <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>일
-          </li>
-          <li>
-            <input type="number" placeholder="휴대폰번호">
-          </li>
-        </ul>
-      </form>
-      <div class="btn-div">
-        <button class="join-btn" type="submit">회원가입</button>
-      </div>
-    </div>
-  </div>
-</body></html>
->>>>>>> Stashed changes
