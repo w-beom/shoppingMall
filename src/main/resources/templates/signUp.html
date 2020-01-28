@@ -22,9 +22,9 @@
 					<li><input type="password" placeholder="비밀번호 확인"></li>
 					<li><input type="email" placeholder="이메일"></li>
 					<li><select>
-							<th:block th:each="num:${#numbers.sequence(1920,2020)}">
-								<option value="${num}">${num}</option>
-							</th:block>
+							<th:each="num">
+								<option value="${num}">1</option>
+							</th:each>
 					</select>년 <select>
 							<option value="1">1</option>
 							<option value="2">2</option>
