@@ -13,6 +13,9 @@ a{
 	color:black;
 	cursor: pointer;
 }
+header{
+	  border-bottom: 1px solid #777;
+}
 #header {
   width: 1158px;
   margin: 0 auto;
@@ -20,7 +23,6 @@ a{
 }
 #header a{
 	transition:0.35s;
-}
 }
 .top-area{
 		width:100%;
@@ -81,7 +83,7 @@ a{
 .main-wrap{
 	width:1360px;
 	height:100%;
-	margin:0 auto;
+	margin:30px auto 15px auto;
 }
 .main-wrap a{
 	transition:0.35s;
