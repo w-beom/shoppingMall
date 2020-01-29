@@ -21,4 +21,8 @@ public class MainController {
 		return "index";
 		
 	}
+	@RequestMapping("login.do")
+	public String login() {
+		return "login";
+	}
 }
