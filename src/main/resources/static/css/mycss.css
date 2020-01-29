@@ -79,6 +79,28 @@ header{
 	transition:0.35s;
 	color:#05f;
 }
+.right-menu{
+	width:60px;
+	height:700px;
+	position: fixed;
+	right:0;
+	top:0;
+	z-index: 5;
+	background-color: #fff;
+		display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 1px solid #eee;
+}
+.right-menu ul{
+	text-align: center;
+}
+.right-menu li{
+	margin-bottom: 30px;
+}
+.right-menu li:last-child{
+	margin-bottom: 0;
+}
 /*------------------------- main------------------ */
 .main-wrap{
 	width:1360px;
@@ -140,7 +162,6 @@ header{
 }
 .line{
 	width:35px;
-	height:1px;
 	border: 1px solid black;
 	margin: 20px auto 20px auto;
 }
