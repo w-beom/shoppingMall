@@ -11,5 +11,14 @@ public class MainController {
 		return "signUp";
 		
 	}
-
+	@RequestMapping("top.do")
+	public String toppage() {
+		return "top";
+		
+	}
+	@RequestMapping("index.do")
+	public String index() {
+		return "index";
+		
+	}
 }
