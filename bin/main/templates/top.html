@@ -4,84 +4,90 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script th:src=@{/js/myjs.js}></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<header th:include="header"></header>
-<main>
-	<div class="main-wrapper">
-		<div class="main-title"><h1>TOP&nbsp;BEST</h1></div>
-		<div class="line"></div>
-		<div class="main-best">
-		<div class="item">
-		<ul>
-		<li><a href="#"><span class="rank">01<br>BEST</span><img th:src="@{images/sample.gif}"></a></li>
-		<li><a href="#">긴팔티</a></li>
-		<li>19,200원</li>
-		</ul>
+	<header th:include="header"></header>
+	<main>
+		<div class="main-wrapper">
+			<div class="main-title">
+				<h1>TOP&nbsp;BEST</h1>
+			</div>
+			<div class="line"></div>
+			<div class="main-best">
+				<div class="item">
+					<ul>
+						<li><a href="#"><span class="rank">01<br>BEST
+							</span><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><a href="#"><span class="rank">02<br>BEST
+							</span><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+				<div class="item">
+					<ul>
+						<li><a href="#"><span class="rank">03<br>BEST
+							</span><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+			</div>
+			<div class="categori">
+				<ul>
+					<li class="cate-left"><a onclick="cate('left')">전체</a></li>
+					<li class="cate-mid"><a onclick="cate('mid')">#KNIT</a></li>
+					<li class="cate-right"><a onclick="cate('right')">#TEE</a></li>
+				</ul>
+			</div>
+			<div class="user-categori">
+				<ul>
+					<li class="uc1"><a onclick="uc('new')">신상품순</a></li>
+					<li class="uc2"><a onclick="uc('popular')">인기상품</a></li>
+					<li class="uc3"><a onclick="uc('low')">낮은가격</a></li>
+					<li class="uc4"><a onclick="uc('high')">높은가격</a></li>
+				</ul>
+			</div>
+			<div class="sub-items">
+				<div class="items">
+					<ul>
+						<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+				<div class="items">
+					<ul>
+						<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+				<div class="items">
+					<ul>
+						<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+				<div class="items">
+					<ul>
+						<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
+						<li><a href="#">긴팔티</a></li>
+						<li>19,200원</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="item">
-		<ul>
-		<li><a href="#"><span class="rank">02<br>BEST</span><img th:src="@{images/sample.gif}"></a></li>
-		<li><a href="#">긴팔티</a></li>
-		<li>19,200원</li>
-		</ul>
-		</div>
-		<div class="item">
-		<ul>
-		<li><a href="#"><span class="rank">03<br>BEST</span><img th:src="@{images/sample.gif}"></a></li>
-		<li><a href="#">긴팔티</a></li>
-		<li>19,200원</li>
-		</ul>
-		</div>
-		</div>
-		<div class="categori">
-		<ul>
-		<li class="cate-left"><a onclick="cate('left')" >전체</a></li>
-		<li class="cate-mid"><a onclick="cate('mid')">#KNIT</a></li>
-		<li class="cate-right"><a onclick="cate('right')">#TEE</a></li>
-		</ul>
-		</div>
-		<div class="user-categori">
-		<ul>
-		<li class="uc1"><a onclick="uc('new')">신상품순</a></li>
-		<li class="uc2"><a onclick="uc('popular')">인기상품</a></li>
-		<li class="uc3"><a onclick="uc('low')">낮은가격</a></li>
-		<li class="uc4"><a onclick="uc('high')">높은가격</a></li>
-		</ul>
-		</div>
-		<div class="sub-items">
-		<div class="items">
-			<ul>
-				<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
-				<li><a href="#">긴팔티</a></li>
-				<li>19,200원</li>
-			</ul>
-		</div>
-		<div class="items">
-			<ul>
-				<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
-				<li><a href="#">긴팔티</a></li>
-				<li>19,200원</li>
-			</ul>
-		</div>
-		<div class="items">
-			<ul>
-				<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
-				<li><a href="#">긴팔티</a></li>
-				<li>19,200원</li>
-			</ul>
-		</div>
-		<div class="items">
-			<ul>
-				<li><a href="#"><img th:src="@{images/sample.gif}"></a></li>
-				<li><a href="#">긴팔티</a></li>
-				<li>19,200원</li>
-			</ul>
-		</div>
-		</div>
-	</div>
-</main>
-<footer th:include="footer"></footer>
+	</main>
+	<footer th:include="footer"></footer>
 </body>
 </html>
