@@ -95,14 +95,12 @@ header {
   transition: 0.35s;
   color: #05f;
 }
-<<<<<<< HEAD
-
 /*------------------------- main------------------ */
 .main-wrap {
   width: 1360px;
   height: 100%;
   margin: 30px auto 15px auto;
-=======
+}
 .right-menu{
 	width:60px;
 	height:700px;
@@ -233,7 +231,6 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	margin-top:8px;
->>>>>>> wodlr777
 }
 
 .main-wrap a {
