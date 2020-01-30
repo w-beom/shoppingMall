@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header th:include="header"></header>
+	<main>
+		<div class="main-wrapper">
+			<div class="detail">
+				<div class="detail-img">
+					<img th:src="@{images/sample.gif}">
+				</div>
+				<div class="detail-info">
+					<ul>
+						<li>신상 긴팔티신상 긴팔티신상 긴팔티신상 긴팔티신상 긴팔티신상 긴팔티신상 긴팔티신상 긴팔티</li>
+					</ul>
+					<ul>
+						<li><span>판매가</span>23,900원</li>
+						<li><span>할인가</span>19,920원</li>
+						<li><span>색상</span><select><option value="">--옵션
+									선택--</option>
+								<option value="black">블랙</option></select></li>
+					</ul>
+					<div class="price">
+						<h2>0원</h2>
+					</div>
+					<div class="box-btn">
+						<ul>
+							<li><a href="#">바로구매</a></li>
+							<li><a href="#">장바구니</a></li>
+							<li><a href="#">관심상품</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="detail-tap">
+				<ul>
+					<li><a href="#">상품상세</a></li>
+					<li><a href="#">상품후기(0)</a></li>
+					<li><a href="#">상품문의(0)</a></li>
+					<li><a href="#">관련상품</a></li>
+					<li><a href="#">배송&middot;교환&middot;반품</a></li>
+				</ul>
+			</div>
+			<div class="board">
+				<ul>
+					<li>이&nbsp;름:&nbsp;<input type="text" name="name"></li>
+					<li>첨&nbsp;부:&nbsp;<input type="file" name="file"></li>
+					<li>내&nbsp;용:&nbsp;<textarea cols="100" rows="5" name="content"></textarea></li>
+				</ul>
+			</div>
+		</div>
+	</main>
+	<footer th:include="footer"></footer>
+</body>
+</html>

@@ -21,4 +21,49 @@ public class MainController {
 		return "index";
 		
 	}
+	@RequestMapping("Detail.do")
+	public String detail() {
+		return "Detail";
+		
+	}
+	@RequestMapping("acc.do")
+	public String acc() {
+		return "Acc";
+		
+	}
+	@RequestMapping("dress.do")
+	public String dress() {
+		return "Dress";
+		
+	}
+	@RequestMapping("inner.do")
+	public String inner() {
+		return "Inner&Season";
+		
+	}
+	@RequestMapping("blouse.do")
+	public String blouse() {
+		return "Blouse&Shirt";
+		
+	}
+	@RequestMapping("pants.do")
+	public String pants() {
+		return "Pants";
+		
+	}
+	@RequestMapping("skirt.do")
+	public String skirt() {
+		return "Skirt";
+		
+	}
+	@RequestMapping("outer.do")
+	public String outer() {
+		return "Outer";
+		
+	}
+	@RequestMapping("bag.do")
+	public String bag() {
+		return "Bag&Shoes";
+		
+	}
 }
