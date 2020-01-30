@@ -436,7 +436,105 @@ header {
   justify-content: center;
   text-align: center;
 }
-
+.detail{
+	width:1360px;
+	height:100%;
+	margin:30px auto;
+	display:flex;
+	justify-content: space-around;
+}
+.detail-img img{
+	width:500px;
+	height: 650px;
+}
+.detail-info ul{
+	width:550px;
+	border-bottom: 1px solid #ddd;
+	margin-top:20px;
+}
+.detail-info li{
+	margin-bottom: 20px;
+}
+.detail-info span{
+	margin-right:60px;
+}
+.detail-info select{
+	width:350px;
+	height:30px;
+	margin-left: 18px;
+}
+.price{
+	margin:20px 0;
+}
+.price h2{
+	display: flex;
+	justify-content: flex-end;
+}
+.box-btn ul{
+	display:flex;
+	border:none;
+	margin-left:10px;
+}
+.box-btn li{
+	width:170px;
+	height:55px;
+	border: 1px solid black;
+	line-height: 55px;
+	margin-right:5px;
+	transition:0.35s;
+}
+.box-btn li:last-child{
+	margin-right:0;
+}
+.box-btn a{
+	width:100%;
+	height:100%;
+		display: flex;
+	justify-content: center;
+}
+.box-btn li:hover{
+	background-color: black;
+	transition:0.35s;
+}
+.box-btn li:hover a{
+	color:#fff;
+}
+.detail-tap{
+	width:1360px;
+	height:70px;
+	margin:0 auto;
+}
+.detail-tap ul{
+	display: flex;
+	justify-content: center;
+}
+.detail-tap li{
+	width:300px;
+	height:60px;
+	border: 1px solid #ddd;
+	display: flex;
+	justify-content: center;
+	line-height: 60px;
+	border-right:none;
+}
+.detail-tap li:last-child{
+	border-right:1px solid #ddd;
+}
+.detail-tap a{
+	width:100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+}
+.board{
+	width:1360px;
+	height:100%;
+	margin:0 auto;
+}
+.board input{
+	width:300px;
+	height:20px;
+}
 /*------------------------ footer----------------- */
 footer {
   background-color: #1a1e21;
