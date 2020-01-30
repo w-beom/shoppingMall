@@ -25,4 +25,8 @@ public class MainController {
 	public String login() {
 		return "login";
 	}
+	@RequestMapping("mypage.do")
+		public String myPage() {
+		return "myPage";
+	}
 }
