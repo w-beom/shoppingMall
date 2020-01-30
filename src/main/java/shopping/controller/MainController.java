@@ -21,6 +21,7 @@ public class MainController {
 		return "index";
 		
 	}
+<<<<<<< HEAD
 	@RequestMapping("Detail.do")
 	public String detail() {
 		return "Detail";
@@ -65,5 +66,14 @@ public class MainController {
 	public String bag() {
 		return "Bag&Shoes";
 		
+=======
+	@RequestMapping("login.do")
+	public String login() {
+		return "login";
+	}
+	@RequestMapping("mypage.do")
+		public String myPage() {
+		return "myPage";
+>>>>>>> 836514de7ba19b66e6f29872f18836b52e3db0b7
 	}
 }

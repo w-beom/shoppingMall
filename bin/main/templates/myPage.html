@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script th:src="@{/js/slider.js}"></script>
+<script th:src="@{/js/slider2.js}"></script>
+</head>
+
+<body>
+	<header th:include="header"></header>
+	<div class="mypage_wrap">
+		<div class="tit_page">마이페이지</div>
+		<div class="info">
+			<div class="user">
+				<div class="user_info">
+					<p>
+						홍길동님 <a href="#">정보변경</a>
+					</p>
+
+					<div class="box">
+						<div class="grp">
+							<p>홍길동님은 [니쁜스 걸]회원입니다.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="order">
+				<ul>
+					<li>나의 적립금</li>
+					<li>0원</li>
+					<li><a href="#" class="">바로가기</a></li>
+				</ul>
+				<ul>
+					<li>나의 예치금</li>
+					<li>0원</li>
+					<li><a href="#" class="">바로가기</a></li>
+				</ul>
+				<ul>
+					<li>나의 보유쿠폰</li>
+					<li>1개</li>
+					<li><a href="#" class="">바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu">
+			<ul>
+				<li>주문조회</li>
+				<li>장바구니</li>
+				<li>관심상품</li>
+				<li>최근본상품</li>
+				<li>나의 문의 내역</li>
+				<li>나의 상품 후기</li>
+				<li>정보변경</li>
+				<li>회원탈퇴</li>
+			</ul>
+		</div>
+		<div class="hd">최근 주문 정보</div>
+		<div class="tb1">
+			<table>
+				<thead>
+					<tr>
+						<th>날짜</th>
+						<th>상품</th>
+						<th>가격</th>
+						<th>상세</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="hd">최근 등록 게시글</div>
+		<div class="tb1">
+			<table>
+				<thead>
+					<tr>
+						<th>날짜</th>
+						<th>제목</th>
+						<th>게시판명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			<div class="hd">나의 관심상품</div>
+		</div>
+		<div>
+			<div class="hd">최근 본상품</div>
+		</div>
+	</div>
+	<footer th:include="footer"></footer>
+</body>
+</html>
