@@ -103,7 +103,7 @@ header {
 }
 .right-menu{
 	width:60px;
-	height:700px;
+	height:770px;
 	position: fixed;
 	right:0;
 	top:0;
@@ -535,6 +535,56 @@ header {
 .board input{
 	width:300px;
 	height:20px;
+}
+.title{
+	display: flex;
+	justify-content: center;
+}
+.title h3{
+	width:300px;
+	height:40px;
+	border:2px solid #ddd;
+	display: flex;
+	justify-content: center;
+	line-height: 40px;
+}
+.ask-board{
+	display: flex;
+	justify-content: space-between;
+}
+.ask-board ul{
+	display: flex;
+}
+.ask-board li{
+	margin-right:10px;
+}
+.board-view{
+	width:1360px;
+	min-height:300px;
+	max-height:100%;
+	margin:10px auto 20px auto;
+	border-top: 1px solid black;
+}
+.board-view ul{
+	border-bottom:1px solid #ddd;
+	background-color:#FCFCFC;
+	display: flex;
+	padding:10px 0;
+}
+.no{
+	flex:1;
+}
+.content{
+	flex:5;
+}
+.name{
+	flex:1;
+}
+.date{
+	flex:1;
+}
+.hits{
+	flex:1;
 }
 /*------------------------ footer----------------- */
 footer {
