@@ -14,26 +14,29 @@
 			<h1 class="userInfo">회원정보 입력</h1>
 		</div>
 		<div class="join-wrap">
-			<form class="join" method="post">
+			<form class="join" method="post" action="/signup">
 				<ul class="join-form">
-					<li><input type="text" placeholder="이름"></li>
-					<li><input type="text" placeholder="아이디"></li>
-					<li><input type="password" placeholder="비밀번호"></li>
-					<li><input type="password" placeholder="비밀번호 확인"></li>
-					<li><input type="email" placeholder="이메일"></li>
-					<li><select>
-							<th:each="num">
-								<option value="${num}">1</option>
-							</th:each>
-					</select>년 <select>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-					</select>월 <select>
-							<option value="1">1</option>
-							<option value="2">2</option>
-					</select>일</li>
-					<li><input type="number" placeholder="휴대폰번호"></li>
+					<li><input type="text" placeholder="이름" name="user_name"></li>
+					<li><input type="text" placeholder="아이디" name="user_id"></li>
+					<li><input type="password" placeholder="비밀번호" name="user_pw"></li>
+					<li><input type="password" placeholder="비밀번호 확인"
+						name="user_pw2"></li>
+					<li><input type="text" placeholder="주소" name="user_address">
+					<li><input type="email" placeholder="이메일" name="user_email"></li>
+					<li>
+						<select name="user_year">
+							<option th:each="num:${#numbers.sequence(1920,2020)}" th:text="${num}" th:value="${num}"></option>
+						</select>년 
+						<select>
+							<option th:each="num:${#numbers.sequence(1,12)}" th:text="${num}" th:value="${num}"></option>
+						</select>월
+						<select>
+							<option th:each="num:${#numbers.sequence(1,31)}" th:text="${num}" th:value=${num}></option>
+						</select>일
+					</li>
+					<li>
+						<input type="tel" placeholder="휴대폰번호" name="user_phone">
+					</li>
 				</ul>
 			</form>
 			<div class="btn-div">
