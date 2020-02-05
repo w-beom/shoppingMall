@@ -33,16 +33,16 @@
 			<div class="board-view">
 				<ul>
 					<li class="no">NO.</li>
-					<li class="content">Content</li>
+					<li class="content">Title</li>
 					<li class="name">Name</li>
 					<li class="date">Date</li>
 					<li class="hits">Hits</li>
 				</ul>
-				<ul>
-					<li class="no">1</li>
-					<li class="content"><a href="#">테스트</a></li>
-					<li class="name">테스트</li>
-					<li class="date">2020/01/31</li>
+				<ul th:each="board:${board}" th:if="${#lists.size(board)} > 0">
+					<li class="no" th:text="${board.customer_id}"></li>
+					<li class="content"><a href="#" th:text="${board.customer_subject}"></a></li>
+					<li class="name" th:text="${board.user_id}"></li>
+					<li class="date" th:text="${board.customer_date}"></li>
 					<li class="hits">0</li>
 				</ul>
 			</div>

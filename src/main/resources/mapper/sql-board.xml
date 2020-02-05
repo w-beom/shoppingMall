@@ -7,7 +7,9 @@
 
 	<insert id="insertCBoard" parameterType="shopping.vo.Customer_BoardVO">
 		insert into customer(customer_subject,customer_content,customer_date)
-		values(#{customer_subject},#{customer_content},sysdate)
+		values(#{customer_subject},#{customer_content},now())
 	</insert>
-	
+	<select id="selectCBoardList" resultType="shopping.vo.Customer_BoardVO">
+	select * from customer order by customer_id desc
+	</select>
 </mapper>

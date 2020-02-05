@@ -1,8 +1,11 @@
 package shopping.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import shopping.service.BoardService;
 import shopping.vo.Customer_BoardVO;
@@ -20,5 +23,12 @@ public class BoardController {
 		boardService.insertCBoard(vo);
 		return "board";
 	}	
-
+	@RequestMapping("board.do")
+	public ModelAndView board() {
+		List<Customer_BoardVO> board=boardService.selectCBoradList();
+		ModelAndView mv=new ModelAndView();
+		mv.setViewName("board");
+		mv.addObject("board",board);
+		return mv;
+	}
 }

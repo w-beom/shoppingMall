@@ -576,13 +576,13 @@ header {
 	flex:1;
 }
 .content{
-	flex:5;
+	flex:3;
 }
 .name{
 	flex:1;
 }
 .date{
-	flex:1;
+	flex:2;
 }
 .hits{
 	flex:1;

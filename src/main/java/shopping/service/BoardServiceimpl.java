@@ -1,5 +1,7 @@
 package shopping.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,12 @@ public class BoardServiceimpl implements BoardService {
 	@Override
 	public void insertCBoard(Customer_BoardVO vo) {
 		boardMapper.insertCBoard(vo);
+		
+	}
+
+	@Override
+	public List<Customer_BoardVO> selectCBoradList() {
+		return boardMapper.selectCBoardList();
 		
 	}
 

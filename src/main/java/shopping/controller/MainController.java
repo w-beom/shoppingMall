@@ -87,26 +87,8 @@ public class MainController {
 		public String myPage() {
 		return "myPage";
 	}
-	@RequestMapping("board.do")
-	public String board() {
-		return "board";
-	}
-	@RequestMapping(value = "/signup",method = RequestMethod.POST)
-	public String signup2(UserVO vo) {
-		System.out.println(vo);
-		userService.insertUser(vo);
-		return "index";
-		
-	}
 	@RequestMapping("write.do")
 	public String write() {
 		return "board_write";
 	}
-	
-	@RequestMapping(value = "/board/write",method = RequestMethod.POST)
-	public String c_boardWrite(Customer_BoardVO vo) {
-		System.out.println(vo);
-		boardService.insertCBoard(vo);
-		return "board";
-	}	
 }
