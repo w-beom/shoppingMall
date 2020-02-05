@@ -20,9 +20,8 @@ public class BoardController {
 	public String c_boardWrite(Customer_BoardVO vo) {
 		System.out.println(vo);
 		boardService.insertCBoard(vo);
-		return "board";
-	}
-
+		return "redirect:/board.do";
+	}	
 	@RequestMapping("board.do")
 	public ModelAndView board() {
 		List<Customer_BoardVO> board = boardService.selectCBoradList();

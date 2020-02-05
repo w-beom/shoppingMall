@@ -6,10 +6,14 @@
 <mapper namespace="shopping.mapper.BoardMapper">
 
 	<insert id="insertCBoard" parameterType="shopping.vo.Customer_BoardVO">
-		insert into customer(customer_subject,customer_content,customer_date)
-		values(#{customer_subject},#{customer_content},now())
+		insert into customer(customer_subject,customer_content,customer_date,user_id)
+		values(#{customer_subject},#{customer_content},now(),(select user_id from user where id=#{id}))
 	</insert>
 	<select id="selectCBoardList" resultType="shopping.vo.Customer_BoardVO">
-	select * from customer order by customer_id desc
+	select a.customer_id, a.customer_subject, a.customer_content, b.id, a.customer_date
+from customer as a
+join user as b
+on a.user_id=b.user_id
+order by a.customer_id desc
 	</select>
 </mapper>
