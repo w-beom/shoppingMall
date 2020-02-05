@@ -103,7 +103,7 @@ public class MainController {
 		return "board_write";
 	}
 	
-	@RequestMapping("/board/write")
+	@RequestMapping(value = "/board/write",method = RequestMethod.POST)
 	public String c_boardWrite(Customer_BoardVO vo) {
 		System.out.println(vo);
 		boardService.insertCBoard(vo);
