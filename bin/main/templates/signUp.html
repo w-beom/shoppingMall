@@ -19,27 +19,29 @@
 					<li><input type="text" placeholder="이름" name="name"></li>
 					<li><input type="text" placeholder="아이디" name="id"></li>
 					<li><input type="password" placeholder="비밀번호" name="pw"></li>
-					<li><input type="password" placeholder="비밀번호 확인" name="pw2"></li>
+					<li><input type="password" placeholder="비밀번호 확인"
+						name="pw2"></li>
 					<li><input type="text" placeholder="주소" name="address">
-					<li><input type="email" placeholder="이메일" name="email"></li>
-					<li><input type="text" placeholder="휴대폰번호" name="phone">
+					<li><input type="email" placeholder="이메일" name="user_email"></li>
+					<li>
+						<select name="user_year">
+							<option th:each="num:${#numbers.sequence(1920,2020)}" th:text="${num}" th:value="${num}"></option>
+						</select>년 
+						<select>
+							<option th:each="num:${#numbers.sequence(1,12)}" th:text="${num}" th:value="${num}"></option>
+						</select>월
+						<select>
+							<option th:each="num:${#numbers.sequence(1,31)}" th:text="${num}" th:value=${num}></option>
+						</select>일
 					</li>
-					<li><select name="year">
-							<option th:each="num:${#numbers.sequence(1920,2020)}"
-								th:text="${num}" th:value="${num}"></option>
-					</select>년 <select name="month">
-							<option th:each="num:${#numbers.sequence(1,12)}" th:text="${num}"
-								th:value="${num}"></option>
-					</select>월 <select name="day">
-							<option th:each="num:${#numbers.sequence(1,31)}" th:text="${num}"
-								th:value=${num}></option>
-					</select>일</li>
-
+					<li>
+						<input type="tel" placeholder="휴대폰번호" name="user_phone">
+					</li>
 				</ul>
-				<div class="btn-div">
-					<button class="join-btn" type="submit">회원가입</button>
-				</div>
 			</form>
+			<div class="btn-div">
+				<button class="join-btn" type="submit">회원가입</button>
+			</div>
 		</div>
 	</div>
 	<footer th:include="footer"></footer>
