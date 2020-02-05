@@ -16,7 +16,7 @@
 			</div>
 			<div class="ask-board">
 				<div>
-					<a href="write.do">글쓰기</a>
+					<a th:attr="onclick=|javascript:boardwrite('${session.id}')|">글쓰기</a>
 				</div>
 				<form>
 					<div>

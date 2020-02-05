@@ -22,3 +22,12 @@ function uc(uc) {
 		$(".uc4 a").css("color","black").css("font-weight","bold");
 	}
 }
+function boardwrite(id){
+	if(id=="null"){
+		alert('로그인 해주세요');
+		location.href="login.do";
+	}
+	else{
+		location.href="write.do"
+	}
+}
