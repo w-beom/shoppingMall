@@ -15,6 +15,7 @@
 				<h3>Q&amp;A</h3>
 			</div>
 			<form action="/board/write" method="post">
+			<input type="hidden" th:value="${session.id}" name="id">
 				<div class="board-view">
 					<ul>
 						<li><span>NAME</span><h4 th:text="${session.id}"></h4></li>
