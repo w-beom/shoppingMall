@@ -17,7 +17,7 @@
 			<form action="/board/write" method="post">
 				<div class="board-view">
 					<ul>
-						<li><span>NAME</span><h4></h4></li>
+						<li><span>NAME</span><h4 th:text="${session.id}"></h4></li>
 					</ul>
 					<ul>
 						<li><span>TITLE</span><select name="customer_subject">

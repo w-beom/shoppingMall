@@ -2,15 +2,10 @@ package shopping.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import shopping.service.BoardService;
 import shopping.service.UserService;
-import shopping.vo.Customer_BoardVO;
-import shopping.vo.UserVO;
 
 @Controller
 public class MainController {
@@ -87,21 +82,9 @@ public class MainController {
 		public String myPage() {
 		return "myPage";
 	}
-<<<<<<< HEAD
-=======
-	@RequestMapping("board.do")
-	public String board() {
-		return "board";
-	}
 	
->>>>>>> 73d822aec951d144b22f26ca4e2f5bc16ff42cde
 	@RequestMapping("write.do")
 	public String write() {
 		return "board_write";
 	}
-<<<<<<< HEAD
-=======
-	
-	
->>>>>>> 73d822aec951d144b22f26ca4e2f5bc16ff42cde
 }
