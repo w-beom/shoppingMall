@@ -42,5 +42,12 @@ public class UserController {
 		else
 			return "login";
 	}
+	
+	@RequestMapping(value = "/logout",method = RequestMethod.GET)
+	public String logout(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		return "index";
+	}
 
 }

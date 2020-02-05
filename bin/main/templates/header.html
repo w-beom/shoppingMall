@@ -19,7 +19,8 @@
 						<li><a href="mypage.do">마이페이지</a></li>
 						<li><a href="#">장바구니</a></li>
 						<li><a href="board.do">문의하기</a></li>
-						<li><a th:if="${session.id}!=null" th:text="로그아웃" href="logout.do"></a></li>
+						<li><a th:if="${session.id}!=null" th:text="로그아웃"
+							href="/logout"></a></li>
 					</ul>
 				</div>
 			</div>

@@ -10,25 +10,25 @@ import org.springframework.web.servlet.ModelAndView;
 import shopping.service.BoardService;
 import shopping.vo.Customer_BoardVO;
 
-
 @Controller
 public class BoardController {
-	
+
 	@Autowired
 	BoardService boardService;
-	
+
 	@RequestMapping("/board/write")
 	public String c_boardWrite(Customer_BoardVO vo) {
 		System.out.println(vo);
 		boardService.insertCBoard(vo);
 		return "board";
-	}	
+	}
+
 	@RequestMapping("board.do")
 	public ModelAndView board() {
-		List<Customer_BoardVO> board=boardService.selectCBoradList();
-		ModelAndView mv=new ModelAndView();
+		List<Customer_BoardVO> board = boardService.selectCBoradList();
+		ModelAndView mv = new ModelAndView();
 		mv.setViewName("board");
-		mv.addObject("board",board);
+		mv.addObject("board", board);
 		return mv;
 	}
 }
