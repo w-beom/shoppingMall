@@ -14,6 +14,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public void insertUser(UserVO vo) {
+		System.out.println("여기까지와지나");
 		userMapper.insertUser(vo);
 	}
 

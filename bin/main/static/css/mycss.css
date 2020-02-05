@@ -151,6 +151,7 @@ header {
 }
 .box{
 	display: flex;
+	justify-content: center;
 }
 .left-box ul{
 	display:flex;
@@ -585,6 +586,27 @@ header {
 }
 .hits{
 	flex:1;
+}
+.board-view span{
+	width:70px;
+	margin-right: 20px;
+	color:#777;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+}
+.board-view input{
+	margin-right:20px;
+}
+.board-view li{
+	display:flex;
+}
+.write-btn{
+	display:flex;
+	justify-content: flex-end;
+}
+.write-btn li{
+	margin-right: 10px;
 }
 /*------------------------ footer----------------- */
 footer {

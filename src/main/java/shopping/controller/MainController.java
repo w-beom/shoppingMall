@@ -2,10 +2,14 @@ package shopping.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import shopping.service.BoardService;
 import shopping.service.UserService;
+import shopping.vo.Customer_BoardVO;
 import shopping.vo.UserVO;
 
 @Controller
@@ -13,6 +17,8 @@ public class MainController {
 	
 	@Autowired
 	UserService userService;
+	
+	BoardService boardService;
 	
 	@RequestMapping("signup.do")
 	public String signup() {
@@ -81,17 +87,26 @@ public class MainController {
 		public String myPage() {
 		return "myPage";
 	}
-<<<<<<< HEAD
 	@RequestMapping("board.do")
 	public String board() {
 		return "board";
-=======
-	
-	@RequestMapping("/signup")
-	public String signup2(@RequestParam UserVO vo) {
+	}
+	@RequestMapping(value = "/signup",method = RequestMethod.POST)
+	public String signup2(UserVO vo) {
+		System.out.println(vo);
 		userService.insertUser(vo);
 		return "index";
 		
->>>>>>> master
 	}
+	@RequestMapping("write.do")
+	public String write() {
+		return "board_write";
+	}
+	
+	@RequestMapping("/board/write")
+	public String c_boardWrite(Customer_BoardVO vo) {
+		System.out.println(vo);
+		boardService.insertCBoard(vo);
+		return "board";
+	}	
 }

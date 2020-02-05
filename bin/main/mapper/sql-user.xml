@@ -5,9 +5,9 @@
 
 <mapper namespace="shopping.mapper.UserMapper">
 
-	<insert id="insertUser">
-		insert into user
-		values
+	<insert id="insertUser" parameterType="shopping.vo.UserVO">
+		insert into user(id,pw,email,birth,phone,address,name)
+		values (#{id},#{pw},#{email},#{birth},#{phone},#{address},#{name})
 	</insert>
 	
 </mapper>

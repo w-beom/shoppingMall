@@ -41,7 +41,7 @@ public class DatasourceConfig {
 		//스프링 마이바티스에서는 SqlSessionFactory 생성하기 위해서 SqlSessionFactoryBean 객체를 이용
 		SqlSessionFactoryBean sqlSessionBean=new SqlSessionFactoryBean();
 		sqlSessionBean.setDataSource(dataSource);
-		//sqlSessionBean.setMapperLocations(applicationcontext.getResources("classpath:/mapper/**/sql-*.xml"));
+		sqlSessionBean.setMapperLocations(applicationcontext.getResources("classpath:/mapper/**/sql-*.xml"));
 		//**: mapper폴더아래 모든하위폴더 sql-*.xml:sql-로 시작하는 모든파일
 		
 //		sqlSessionBean.setConfiguration(mybatisConfig());
