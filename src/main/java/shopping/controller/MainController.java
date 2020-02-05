@@ -87,8 +87,21 @@ public class MainController {
 		public String myPage() {
 		return "myPage";
 	}
+<<<<<<< HEAD
+=======
+	@RequestMapping("board.do")
+	public String board() {
+		return "board";
+	}
+	
+>>>>>>> 73d822aec951d144b22f26ca4e2f5bc16ff42cde
 	@RequestMapping("write.do")
 	public String write() {
 		return "board_write";
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 73d822aec951d144b22f26ca4e2f5bc16ff42cde
 }

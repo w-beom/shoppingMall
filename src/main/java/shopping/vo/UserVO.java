@@ -1,12 +1,14 @@
 package shopping.vo;
 
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
 public class UserVO {
 	private int user_id;
 	private String id;
@@ -19,9 +21,10 @@ public class UserVO {
 	private int month;
 	private int day;
 	private String birth;
-	
-	public  UserVO(int year,int month,int day) {
-		String date=LocalDate.of(year, month, day).format(DateTimeFormatter.BASIC_ISO_DATE);
-		birth=date;
+
+	public UserVO(int year, int month, int day) {
+		String date = LocalDate.of(year, month, day).format(DateTimeFormatter.BASIC_ISO_DATE);
+		birth = date;
 	}
+
 }

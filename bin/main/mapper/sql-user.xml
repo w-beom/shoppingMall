@@ -10,4 +10,8 @@
 		values (#{id},#{pw},#{email},#{birth},#{phone},#{address},#{name})
 	</insert>
 	
+	<select id="loginUser" parameterType="String" resultType="string">
+		select id from user where id=#{id} and pw=#{pw}
+	</select>
+	
 </mapper>
