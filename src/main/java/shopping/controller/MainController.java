@@ -1,10 +1,18 @@
 package shopping.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import shopping.service.UserService;
+import shopping.vo.UserVO;
 
 @Controller
 public class MainController {
+	
+	@Autowired
+	UserService userService;
 	
 	@RequestMapping("signup.do")
 	public String signup() {
@@ -73,8 +81,17 @@ public class MainController {
 		public String myPage() {
 		return "myPage";
 	}
+<<<<<<< HEAD
 	@RequestMapping("board.do")
 	public String board() {
 		return "board";
+=======
+	
+	@RequestMapping("/signup")
+	public String signup2(@RequestParam UserVO vo) {
+		userService.insertUser(vo);
+		return "index";
+		
+>>>>>>> master
 	}
 }
