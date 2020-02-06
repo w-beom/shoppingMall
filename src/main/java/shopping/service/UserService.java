@@ -8,6 +8,8 @@ public interface UserService {
 
 	//Boolean loginUser(UserVO vo);
 	Boolean loginUser(String id, String pw);
+
+	Boolean idChk(String id);
 	
 
 }

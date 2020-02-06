@@ -1,3 +1,6 @@
+
+var chk=0;
+
 function cate(cate) {
 	$(".categori li").css("background-color","white");
 	$(".categori a").css("color","black");
@@ -50,8 +53,10 @@ function nullcheck(){
 		alert('이메일을 입력해주세요');
 	}else if(phone==""){
 		alert('핸드폰번호를 입력해주세요');
+	}else if(chk==0){
+		alert('ID중복검사를 해주세요')
 	}
-	if(id!=""&&pw!=""&&name!=""&&address!=""&&email!=""&&phone!=""){
+	if(id!=""&&pw!=""&&name!=""&&address!=""&&email!=""&&phone!=""&&chk==1){
 		$(".join").submit();
 	}
 }
@@ -84,4 +89,23 @@ function boardEdit(id,id2,num){
 	else{
 		alert('권한이 없습니다!!');
 	}
+}
+
+function idChk(){
+	var id = $("#id").val();
+	$.ajax({
+		type: "post",
+		url:"/idChk",
+		dataType:"text",
+		data:{"id":id},
+		success:function(result){
+			if(result=="true"){
+				alert("사용하실 수 있는 ID입니다.");
+				chk=1;
+			}else{
+				alert("중복된 ID입니다.");
+				chk=0;
+			}
+		}
+	});
 }

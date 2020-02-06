@@ -21,8 +21,17 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public Boolean loginUser(String id, String pw) {
-		String id_chk = userMapper.loginUser(id,pw);
+		String id_chk = userMapper.loginUser(id, pw);
 		if (id_chk != null)
+			return true;
+		else
+			return false;
+	}
+
+	@Override
+	public Boolean idChk(String id) {
+		String id_chk = userMapper.idChk(id);
+		if (id_chk == null)
 			return true;
 		else
 			return false;
