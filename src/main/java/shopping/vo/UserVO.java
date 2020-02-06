@@ -13,10 +13,6 @@ public class UserVO {
 	private String id;
 	private String pw;
 	private String name;
-	private String birth;
-	private String year;
-	private String month;
-	private String day;
 	private String email;
 	private String address;
 	private String phone;
