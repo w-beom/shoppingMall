@@ -40,7 +40,7 @@
 				</ul>
 				<ul th:each="board:${board}" th:if="${#lists.size(board)} > 0">
 					<li class="no" th:text="${board.customer_id}"></li>
-					<li class="content"><a href="#" th:text="${board.customer_subject}"></a></li>
+					<li class="content"><a href="boardDetail.do?no=" th:attrappend="href=${board.customer_id}"  th:text="${board.customer_subject}"></a></li>
 					<li class="name" th:text="${board.id}"></li>
 					<li class="date" th:text="${board.customer_date}"></li>
 					<li class="hits">0</li>

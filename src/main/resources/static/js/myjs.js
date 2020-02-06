@@ -1,6 +1,3 @@
-/**
- * 
- */
 function cate(cate) {
 	$(".categori li").css("background-color","white");
 	$(".categori a").css("color","black");
@@ -29,5 +26,54 @@ function boardwrite(id){
 	}
 	else{
 		location.href="write.do"
+	}
+}
+function nullcheck(){
+	var id=$("#id").val();
+	var pw=$("#pw").val();
+	var pw2=$("#pw2").val();
+	var name=$("#name").val();
+	var email=$("#email").val();
+	var address=$("#address").val();
+	var phone=$("#phone").val();
+	if(name==""){
+		alert('이름를 입력해주세요');
+	}else if(id==""){
+		alert('아이디를 입력해주세요');
+	}else if(pw==""){
+		alert('비밀번호를 입력해주세요');
+	}else if(pw2==""){
+		alert('비밀번호 확인을 입력해주세요');
+	}else if(address==""){
+		alert('주소를 입력해주세요');
+	}else if(email==""){
+		alert('이메일을 입력해주세요');
+	}else if(phone==""){
+		alert('핸드폰번호를 입력해주세요');
+	}
+	if(id!=""&&pw!=""&&name!=""&&address!=""&&email!=""&&phone!=""){
+		$(".join").submit();
+	}
+}
+function login() {
+	var id=$("#id").val();
+	var pw=$("#pw").val();
+	if(id==""){
+		alert('아이디를 입력해주세요');
+	}else if(pw==""){
+		alert('패스워드를 입력해주세요');
+	}
+	if(id!=""&&pw!=""){
+		$("#login").submit();
+	}
+}
+
+function board_delete(id,id2,num){
+	if(id==id2){
+		alert('삭제되었습니다')
+		location.href="boardDelete.do?no="+num;
+	}
+	else{
+		alert('권한이 없습니다!!');
 	}
 }

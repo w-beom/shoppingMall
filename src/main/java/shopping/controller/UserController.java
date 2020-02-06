@@ -8,6 +8,7 @@ import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import shopping.service.UserService;
 import shopping.vo.UserVO;
@@ -42,12 +43,10 @@ public class UserController {
 		else
 			return "login";
 	}
-	
 	@RequestMapping(value = "/logout",method = RequestMethod.GET)
 	public String logout(HttpServletRequest request) {
 		HttpSession session = request.getSession();
 		session.invalidate();
 		return "index";
 	}
-
 }

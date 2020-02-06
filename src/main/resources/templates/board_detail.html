@@ -4,8 +4,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script th:src=@{/js/myjs.js}></script>
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 	<header th:include="header"></header>
@@ -14,24 +13,17 @@
 			<div class="title">
 				<h3>Q&amp;A</h3>
 			</div>
-			<form action="boardwrite.do" method="post">
 			<input type="hidden" th:value="${session.id}" name="id">
 				<div class="board-view">
 					<ul>
-						<li><span>NAME</span><h4 th:text="${session.id}"></h4></li>
+						<li><span>NAME</span><h4 th:text="${board.id}"></h4></li>
 					</ul>
 					<ul>
-						<li><span>TITLE</span><select name="customer_subject">
-								<option value="일반문의">일반문의</option>
-								<option value="해외배송">해외배송</option>
-								<option value="상품문의">상품문의</option>
-								<option value="입금확인">입금확인</option>
-								<option value="표시안함">표시안함</option>
-						</select></li>
+						<li><span>TITLE</span><h2 th:text="${board.customer_subject}"></h2></li>
 					</ul>
 					<ul>
 						<li><span>CONTENT</span>
-						<textarea cols="100" rows="10" name="customer_content"></textarea></li>
+						<textarea cols="100" rows="10" name="customer_content" th:text="${board.customer_content}"></textarea></li>
 					</ul>
 					<!-- <ul>
 						<li><span>FILE</span><input type="file"></li>
@@ -39,11 +31,11 @@
 				</div>
 				<div>
 					<ul class="write-btn">
-						<li><button type="submit">글쓰기</button></li>
 						<li><a href="board.do">목록</a></li>
+						<li><a th:attr="onclick=|javascript:board_delete('${session.id}','${board.id}','${board.customer_id}')|">삭제</a></li>
+						<li><a href="board_edit.do?no=" th:attrappend="href=${board.customer_id}">수정</a></li>
 					</ul>
 				</div>
-			</form>
 			</div>
 	</main>
 	<footer th:include="footer"></footer>

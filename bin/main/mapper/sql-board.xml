@@ -16,4 +16,17 @@ join user as b
 on a.user_id=b.user_id
 order by a.customer_id desc
 	</select>
+	<select id="selectBoardDetail" resultType="shopping.vo.Customer_BoardVO">
+	select a.customer_id, a.customer_subject, a.customer_content, b.id, a.customer_date
+from customer as a
+join user as b
+on a.user_id=b.user_id
+where a.customer_id=${no}
+	</select>
+	<delete id="deleteBoard">
+	delete from customer where customer_id=#{no}
+	</delete>
+	<update id="editBoard" parameterType="shopping.vo.Customer_BoardVO">
+	update customer set customer_content=#{customer_content},customer_subject=#{customer_subject},customer_date=now() where customer_id=#{customer_id}
+	</update>
 </mapper>

@@ -14,9 +14,9 @@
 			<div class="title">
 				<h3>Q&amp;A</h3>
 			</div>
-			<form action="boardwrite.do" method="post">
-			<input type="hidden" th:value="${session.id}" name="id">
+			<form action="editboard2.do" method="get">
 				<div class="board-view">
+				<input type="hidden" name="customer_id" th:value="${board.customer_id}">
 					<ul>
 						<li><span>NAME</span><h4 th:text="${session.id}"></h4></li>
 					</ul>
@@ -31,7 +31,7 @@
 					</ul>
 					<ul>
 						<li><span>CONTENT</span>
-						<textarea cols="100" rows="10" name="customer_content"></textarea></li>
+						<textarea cols="100" rows="10" th:text="${board.customer_content}" name="customer_content"></textarea></li>
 					</ul>
 					<!-- <ul>
 						<li><span>FILE</span><input type="file"></li>
@@ -39,8 +39,8 @@
 				</div>
 				<div>
 					<ul class="write-btn">
-						<li><button type="submit">글쓰기</button></li>
-						<li><a href="board.do">목록</a></li>
+					<li><button type="submit">저장</button></li>
+						<li><a href="board.do">취소</a></li>
 					</ul>
 				</div>
 			</form>

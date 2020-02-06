@@ -10,4 +10,10 @@ public interface BoardService {
 
 	List<Customer_BoardVO> selectCBoradList();
 
+	Customer_BoardVO selectBoardDetail(int no);
+
+	void deleteBoard(int no);
+
+	void editBoard(Customer_BoardVO vo);
+
 }

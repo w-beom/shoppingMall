@@ -26,4 +26,21 @@ public class BoardServiceimpl implements BoardService {
 		
 	}
 
+	@Override
+	public Customer_BoardVO selectBoardDetail(int no) {
+		return boardMapper.selectBoardDetail(no);
+	}
+
+	@Override
+	public void deleteBoard(int no) {
+		boardMapper.deleteBoard(no);
+		
+	}
+
+	@Override
+	public void editBoard(Customer_BoardVO vo) {
+		boardMapper.editBoard(vo);
+		
+	}
+
 }
