@@ -85,7 +85,6 @@ function board_delete(id,id2,num){
 
 function idChk(){
 	var id = $("#id").val();
-	alert('ㅇㅇ');
 	$.ajax({
 		type: "post",
 		url:"/idChk",
