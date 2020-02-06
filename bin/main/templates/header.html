@@ -8,57 +8,57 @@
 </head>
 
 <body>
-<header>
-	<div id="header">
-		<div class="top-area">
-			<div class="top-div">
-				<ul class="top-info">
-					<li><a href="signup.do">회원가입</a></li>
-					<li><a href="login.do">로그인</a></li>
-					<li><a href="mypage.do">마이페이지</a></li>
-					<li><a href="#">장바구니</a></li>
-					<li><a href="#">개인결제</a></li>
-					<li><a href="#">문의하기</a></li>
+	<header>
+		<div id="header">
+			<div class="top-area">
+				<div class="top-div">
+					<ul class="top-info">
+						<li><a href="signup.do">회원가입</a></li>
+						<li><a th:if="${session.id}==null" href="login.do">로그인</a> <a
+							th:if="${session.id}!=null" th:text="${session.id}+님"></a></li>
+						<li><a href="mypage.do">마이페이지</a></li>
+						<li><a href="#">장바구니</a></li>
+						<li><a href="board.do">문의하기</a></li>
+						<li><a th:if="${session.id}!=null" th:text="로그아웃"
+							href="/logout"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="middle-area">
+				<div class="main-logo">
+					<a href="index.do"><img
+						src="http://nibbuns.co.kr/design/piasom/img/logo.png"></a>
+				</div>
+				<div class="btn-search">
+					<input type="search" placeholder="검색"> <a
+						class="search-icon" href="#"><img
+						th:src="@{images/search.png}"></a>
+				</div>
+			</div>
+			<div class="bottom-area">
+				<ul class="bottom-info">
+					<li><a href="top.do">TOP</a></li>
+					<li><a href="blouse.do">BLOUSE&SHIRT</a></li>
+					<li><a href="dress.do">DRESS</a></li>
+					<li><a href="pants.do">PANTS</a></li>
+					<li><a href="skirt.do">SKIRT</a></li>
+					<li><a href="outer.do">OUTER</a></li>
+					<li><a href="bag.do">BAG&SHOES</a></li>
+					<li><a href="acc.do">ACC</a></li>
+					<li><a href="inner.do">INNER&SEASON</a></li>
+				</ul>
+			</div>
+			<div class="right-menu">
+				<ul>
+					<li><a href="#"><img th:src="@{images/my.png}"></a></li>
+					<li><a href="#"><img th:src="@{images/ico01.png}"></a></li>
+					<li><a href="#"><img th:src="@{images/ico02.png}"></a></li>
+					<li><a href="#"><img th:src="@{images/ico03.png}"></a></li>
+					<li><a href="#"><img th:src="@{images/ico04.png}"></a></li>
+					<li><a href="#"><img th:src="@{images/ico05.png}"></a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="middle-area">
-			<div class="main-logo">
-				<a href="index.do"><img
-					src="http://nibbuns.co.kr/design/piasom/img/logo.png"></a>
-			</div>
-			<div class="btn-search">
-				<input type="search" placeholder="검색">
-				<a class="search-icon" href="#"><img th:src="@{images/search.png}"></a>
-			</div>
-		</div>
-		<div class="bottom-area">
-			<ul class="bottom-info">
-				<li><a href="#">NEW 5%</a></li>
-				<li><a href="#">BEST50</a></li>
-				<li><a href="top.do">TOP</a></li>
-				<li><a href="blouse.do">BLOUSE&SHIRT</a></li>
-				<li><a href="dress.do">DRESS</a></li>
-				<li><a href="pants.do">PANTS</a></li>
-				<li><a href="skirt.do">SKIRT</a></li>
-				<li><a href="outer.do">OUTER</a></li>
-				<li><a href="bag.do">BAG&SHOES</a></li>
-				<li><a href="acc.do">ACC</a></li>
-				<li><a href="inner.do">INNER&SEASON</a></li>
-				<li><a href="#">SALE</a></li>
-			</ul>
-		</div>
-		<div class="right-menu">
-		<ul>
-		<li><a href="#"><img th:src="@{images/my.png}"></a></li>
-		<li><a href="#"><img th:src="@{images/ico01.png}"></a></li>
-		<li><a href="#"><img th:src="@{images/ico02.png}"></a></li>
-		<li><a href="#"><img th:src="@{images/ico03.png}"></a></li>
-		<li><a href="#"><img th:src="@{images/ico04.png}"></a></li>
-		<li><a href="#"><img th:src="@{images/ico05.png}"></a></li>
-		</ul>
-		</div>
-	</div>
 	</header>
 </body>
 

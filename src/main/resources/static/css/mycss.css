@@ -103,7 +103,7 @@ header {
 }
 .right-menu{
 	width:60px;
-	height:700px;
+	height:770px;
 	position: fixed;
 	right:0;
 	top:0;
@@ -151,6 +151,7 @@ header {
 }
 .box{
 	display: flex;
+	justify-content: center;
 }
 .left-box ul{
 	display:flex;
@@ -301,7 +302,8 @@ header {
 
 .line {
   width: 35px;
-  height: 1px;
+  height: 0;
+  font-size:0px;
   border: 1px solid black;
   margin: 20px auto 20px auto;
 }
@@ -534,6 +536,77 @@ header {
 .board input{
 	width:300px;
 	height:20px;
+}
+.title{
+	display: flex;
+	justify-content: center;
+}
+.title h3{
+	width:300px;
+	height:40px;
+	border:2px solid #ddd;
+	display: flex;
+	justify-content: center;
+	line-height: 40px;
+}
+.ask-board{
+	display: flex;
+	justify-content: space-between;
+}
+.ask-board ul{
+	display: flex;
+}
+.ask-board li{
+	margin-right:10px;
+}
+.board-view{
+	width:1360px;
+	min-height:300px;
+	max-height:100%;
+	margin:10px auto 20px auto;
+	border-top: 1px solid black;
+}
+.board-view ul{
+	border-bottom:1px solid #ddd;
+	background-color:#FCFCFC;
+	display: flex;
+	padding:10px 0;
+}
+.no{
+	flex:1;
+}
+.content{
+	flex:3;
+}
+.name{
+	flex:1;
+}
+.date{
+	flex:2;
+}
+.hits{
+	flex:1;
+}
+.board-view span{
+	width:70px;
+	margin-right: 20px;
+	color:#777;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+}
+.board-view input{
+	margin-right:20px;
+}
+.board-view li{
+	display:flex;
+}
+.write-btn{
+	display:flex;
+	justify-content: flex-end;
+}
+.write-btn li{
+	margin-right: 10px;
 }
 /*------------------------ footer----------------- */
 footer {

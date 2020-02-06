@@ -1,6 +1,8 @@
 package shopping.mapper;
 
+
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import shopping.vo.UserVO;
 
@@ -8,5 +10,9 @@ import shopping.vo.UserVO;
 public interface UserMapper {
 
 	public void insertUser(UserVO vo);
+
+	//public String loginUser(UserVO vo);
+	public String loginUser(@Param("id") String id, @Param("pw")String pw);
+	
 
 }
