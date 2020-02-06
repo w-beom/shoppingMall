@@ -10,6 +10,8 @@ public interface UserService {
 	Boolean loginUser(String id, String pw);
 
 	Boolean idChk(String id);
+
+	UserVO selectUser(String id);
 	
 
 }

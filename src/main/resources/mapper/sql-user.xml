@@ -17,4 +17,8 @@
 		select id from user where id=#{id}
 	</select>
 	
+	<select id="selectUser" resultType="shopping.vo.UserVO">
+		select * from user where id=#{id}
+	</select>
+	
 </mapper>

@@ -37,14 +37,11 @@ public class UserServiceImpl implements UserService {
 			return false;
 	}
 
-	/*
-	 * @Override public Boolean loginUser(UserVO vo) {
-	 * 
-	 * String id_chk=userMapper.loginUser(vo); if(id_chk!=null) return true; else
-	 * return false;
-	 * 
-	 * 
-	 * }
-	 */
+	@Override
+	public UserVO selectUser(String id) {
+
+		return userMapper.selectUser(id);
+
+	}
 
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import shopping.service.UserService;
 import shopping.vo.UserVO;
@@ -19,6 +20,8 @@ public class UserController {
 	
 	@Autowired
 	UserService userService;
+	@Autowired
+	HttpSession session;
 	
 	//회원가입
 	@RequestMapping(value = "/signup",method = RequestMethod.POST)
@@ -32,7 +35,7 @@ public class UserController {
 	public String login(String id,String pw,HttpServletRequest request) {
 		Boolean result=userService.loginUser(id,pw);
 		if(result==true) {
-			HttpSession session = request.getSession();
+			session = request.getSession();
 			session.setAttribute("id", id);
 			return "index";
 		}
@@ -42,7 +45,7 @@ public class UserController {
 	//로그아웃
 	@RequestMapping(value = "/logout",method = RequestMethod.GET)
 	public String logout(HttpServletRequest request) {
-		HttpSession session = request.getSession();
+		session = request.getSession();
 		session.invalidate();
 		return "index";
 	}
@@ -53,5 +56,18 @@ public class UserController {
 		Boolean result=userService.idChk(id);
 		System.out.println(result);
 		return result;
+	}
+	
+	//mypage 회원정보 뿌리기
+	@RequestMapping(value = "/mypage",method = RequestMethod.GET)
+	public ModelAndView mypage(HttpServletRequest request) {
+		session=request.getSession();
+		String id = (String) session.getAttribute("id");
+		UserVO user= userService.selectUser(id);
+		ModelAndView mv = new ModelAndView("mypage");
+		mv.addObject("user",user);
+		
+		return mv;
+		
 	}
 }

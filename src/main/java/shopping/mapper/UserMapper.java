@@ -15,6 +15,8 @@ public interface UserMapper {
 	public String loginUser(@Param("id") String id, @Param("pw")String pw);
 
 	public String idChk(String id);
+
+	public UserVO selectUser(String id);
 	
 
 }

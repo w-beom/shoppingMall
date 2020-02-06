@@ -16,7 +16,7 @@
 						<li><a th:if="${session.id}==null" href="signup.do">회원가입</a></li>
 						<li><a th:if="${session.id}==null" href="login.do">로그인</a> <a
 							th:if="${session.id}!=null" th:text="${session.id}+님"></a></li>
-						<li><a href="mypage.do">마이페이지</a></li>
+						<li><a th:if="${session.id}!=null" href="/mypage">마이페이지</a></li>
 						<li><a href="#">장바구니</a></li>
 						<li><a href="board.do">문의하기</a></li>
 						<li><a th:if="${session.id}!=null" th:text="로그아웃"
