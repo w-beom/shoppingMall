@@ -16,10 +16,10 @@
 			<input type="hidden" th:value="${session.id}" name="id">
 				<div class="board-view">
 					<ul>
-						<li><span>NAME</span><h4 th:text="${board.id}"></h4></li>
+						<li><span>NAME</span><h5 th:text="${board.id}"></h5></li>
 					</ul>
 					<ul>
-						<li><span>TITLE</span><h2 th:text="${board.customer_subject}"></h2></li>
+						<li><span>TITLE</span><h5 th:text="${board.customer_subject}"></h5></li>
 					</ul>
 					<ul>
 						<li><span>CONTENT</span>
@@ -33,7 +33,7 @@
 					<ul class="write-btn">
 						<li><a href="board.do">목록</a></li>
 						<li><a th:attr="onclick=|javascript:board_delete('${session.id}','${board.id}','${board.customer_id}')|">삭제</a></li>
-						<li><a href="board_edit.do?no=" th:attrappend="href=${board.customer_id}">수정</a></li>
+						<li><a th:attr="onclick=|javascript:boardEdit('${session.id}','${board.id}','${board.customer_id}')|">수정</a></li>
 					</ul>
 				</div>
 			</div>

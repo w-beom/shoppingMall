@@ -43,4 +43,20 @@ public class BoardServiceimpl implements BoardService {
 		
 	}
 
+	@Override
+	public List<Customer_BoardVO> contentSearch(String search) {
+		return boardMapper.contentSearch(search);
+	}
+
+	@Override
+	public List<Customer_BoardVO> subjectSearch(String search) {
+		return boardMapper.subjectSearch(search);
+	}
+
+	@Override
+	public List<Customer_BoardVO> nameSearch(String search) {
+		return boardMapper.nameSearch(search);
+	}
+
+
 }

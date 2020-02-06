@@ -82,6 +82,14 @@ function board_delete(id,id2,num){
 		alert('권한이 없습니다!!');
 	}
 }
+function boardEdit(id,id2,num){
+	if(id==id2){
+		location.href="board_edit.do?no="+num;
+	}
+	else{
+		alert('권한이 없습니다!!');
+	}
+}
 
 function idChk(){
 	var id = $("#id").val();

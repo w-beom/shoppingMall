@@ -18,14 +18,14 @@
 				<div>
 					<a th:attr="onclick=|javascript:boardwrite('${session.id}')|">글쓰기</a>
 				</div>
-				<form>
+				<form action="boardsearch.do" method="get">
 					<div>
 						<ul>
-							<li><input type="radio" name="ch-box">이름</li>
-							<li><input type="radio" name="ch-box" checked>제목</li>
-							<li><input type="radio" name="ch-box">내용</li>
+							<li><input type="radio" name="ch-box" value="id">이름</li>
+							<li><input type="radio" name="ch-box" value="customer_subject">제목</li>
+							<li><input type="radio" name="ch-box" value="customer_content">내용</li>
 							<li><input type="text" name="search"></li>
-							<li><button><img th:src="@{images/search.png}"></button></li>
+							<li><button type="submit" style="border: none; background-color: #fff; cursor: pointer;"><img th:src="@{images/search.png}"></button></li>
 						</ul>
 					</div>
 				</form>
