@@ -16,4 +16,10 @@ public interface BoardService {
 
 	void editBoard(Customer_BoardVO vo);
 
+	List<Customer_BoardVO> contentSearch(String search);
+
+	List<Customer_BoardVO> subjectSearch(String search);
+
+	List<Customer_BoardVO> nameSearch(String search);
+
 }

@@ -59,6 +59,26 @@ public class BoardController {
 	public String boardEdit(Customer_BoardVO vo) {
 		System.out.println(vo);
 		boardService.editBoard(vo);
-		return "redirect:boardDetail.do?no="+vo.getCustomer_id();
+		return "redirect:/boardDetail.do?no="+vo.getCustomer_id();
+	}
+	@RequestMapping("boardsearch.do")
+	public ModelAndView boardsearch(@RequestParam("ch-box")String kind,@RequestParam("search")String search) {
+		List<Customer_BoardVO> vo=null;
+		if(kind.equals("customer_content")) {
+			System.out.println("1");
+			vo=boardService.contentSearch(search);
+		}else if(kind.equals("customer_subject")) {
+			System.out.println("2");
+			vo=boardService.subjectSearch(search);
+		}else if(kind.equals("id")) {
+			System.out.println("3");
+			vo=boardService.nameSearch(search);
+		}
+		System.out.println(search);
+		System.out.println(kind);
+		System.out.println(vo);
+		ModelAndView mv=new ModelAndView("board");
+		mv.addObject("board",vo);
+		return mv;
 	}
 }
