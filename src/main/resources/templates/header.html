@@ -13,7 +13,7 @@
 			<div class="top-area">
 				<div class="top-div">
 					<ul class="top-info">
-						<li><a href="signup.do">회원가입</a></li>
+						<li><a th:if="${session.id}==null" href="signup.do">회원가입</a></li>
 						<li><a th:if="${session.id}==null" href="login.do">로그인</a> <a
 							th:if="${session.id}!=null" th:text="${session.id}+님"></a></li>
 						<li><a href="mypage.do">마이페이지</a></li>

@@ -5,6 +5,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+<script th:src=@{/js/myjs.js}></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,15 +23,15 @@
 					<p>
 						가입하신 아이디와 비밀번호를 입력해주세요.<br> 비밀번호는 대소문자를 구분합니다.
 					</p>
-					<form method="post" action="/login">
+					<form method="post" action="/login" id="login">
 						<ul>
 							<li><input class="login-input" type="text" name="id"
-								placeholder="ID"></li>
+								placeholder="ID" id="id"></li>
 							<li><input class="login-input" type="password" name="pw"
-								placeholder="PASSWORD"></li>
+								placeholder="PASSWORD" id="pw"></li>
 						</ul>
 						<div>
-							<button type="submit">로그인</button>
+							<button type="button" onclick="login()">로그인</button>
 						</div>
 					</form>
 					<div class="login-chk">

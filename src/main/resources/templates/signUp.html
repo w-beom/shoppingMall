@@ -5,6 +5,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" th:href="@{/css/mycss.css}">
+<script th:src=@{/js/myjs.js}></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
 </head>
 
 <body>
@@ -16,31 +20,32 @@
 		<div class="join-wrap">
 			<form class="join" method="post" action="/signup">
 				<ul class="join-form">
-					<li><input type="text" placeholder="이름" name="name"></li>
-					<li><input type="text" placeholder="아이디" name="id"></li>
-					<li><input type="password" placeholder="비밀번호" name="pw"></li>
+					<li><input type="text" placeholder="이름" name="name" id="name"></li>
+					<li><input type="text" placeholder="아이디" name="id" id="id"></li>
+					<li><input type="password" placeholder="비밀번호" name="pw" id="pw"></li>
 					<li><input type="password" placeholder="비밀번호 확인"
-						name="pw2"></li>
-					<li><input type="text" placeholder="주소" name="address">
-					<li><input type="email" placeholder="이메일" name="email"></li>
+						name="pw2"id="pw2"></li>
+					<li><input type="text" placeholder="주소" name="address" id="address">
+					<li><input type="email" placeholder="이메일" name="email" id="email"></li>
+					<li>
+						<input type="tel" placeholder="휴대폰번호" name="phone" id="phone">
+					</li>
 					<li>
 						<select name="year">
 							<option th:each="num:${#numbers.sequence(1920,2020)}" th:text="${num}" th:value="${num}"></option>
 						</select>년 
-						<select>
+						<select name="month">
 							<option th:each="num:${#numbers.sequence(1,12)}" th:text="${num}" th:value="${num}"></option>
 						</select>월
-						<select>
+						<select name="day">
 							<option th:each="num:${#numbers.sequence(1,31)}" th:text="${num}" th:value=${num}></option>
 						</select>일
 					</li>
-					<li>
-						<input type="tel" placeholder="휴대폰번호" name="phone">
-					</li>
+					
 				</ul>
 				<div class="btn-div">
-					<button class="join-btn" type="submit">회원가입</button>
-				</div>
+				<button  class="join-btn" type="button" onclick="nullcheck()">회원가입</button>
+			</div>
 			</form>
 		</div>
 	</div>
