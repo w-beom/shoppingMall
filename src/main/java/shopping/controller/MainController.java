@@ -84,7 +84,11 @@ public class MainController {
 	
 	@RequestMapping("/signup")
 	public String signup2(@RequestParam UserVO vo) {
-		userService.insertUser(vo);
+		System.out.println("아이디 : "+vo.getId());
+		System.out.println("패스워드 : "+vo.getPw());
+		System.out.println("이름 : "+vo.getName());
+			
+		//userService.insertUser(vo);
 		return "index";
 		
 	}
