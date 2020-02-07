@@ -13,6 +13,7 @@
 	<select id="loginUser" parameterType="String" resultType="string">
 		select id from user where id=#{id} and pw=#{pw}
 	</select>
+	
 	<select id="idChk" parameterType="String" resultType="string">
 		select id from user where id=#{id}
 	</select>

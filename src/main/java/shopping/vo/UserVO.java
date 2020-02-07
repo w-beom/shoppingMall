@@ -20,10 +20,15 @@ public class UserVO {
 	private int month;
 	private int day;
 	private String birth;
-
-	public UserVO(int year, int month, int day) {
-		String date = LocalDate.of(year, month, day).format(DateTimeFormatter.BASIC_ISO_DATE);
+	
+	public UserVO() {
+		
+	}
+	
+	public void insertBirth() {
+		String date = LocalDate.of(this.year, this.month, this.day).format(DateTimeFormatter.BASIC_ISO_DATE);
 		birth = date;
+		
 	}
 
 }

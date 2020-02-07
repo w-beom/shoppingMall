@@ -26,6 +26,7 @@ public class UserController {
 	//회원가입
 	@RequestMapping(value = "/signup",method = RequestMethod.POST)
 	public String signup(UserVO vo) {
+		vo.insertBirth();
 		userService.insertUser(vo);
 		return "index";
 		
@@ -37,7 +38,7 @@ public class UserController {
 		if(result==true) {
 			session = request.getSession();
 			session.setAttribute("id", id);
-			return "index";
+			return "redirect:/index.do";
 		}
 		else
 			return "login";
@@ -47,14 +48,13 @@ public class UserController {
 	public String logout(HttpServletRequest request) {
 		session = request.getSession();
 		session.invalidate();
-		return "index";
+		return "redirect:/index.do";
 	}
 	//ID중복체크
 	@ResponseBody
 	@RequestMapping(value = "/idChk", method = RequestMethod.POST)
 	public Boolean idChk(@RequestParam String id) {
 		Boolean result=userService.idChk(id);
-		System.out.println(result);
 		return result;
 	}
 	
@@ -63,6 +63,7 @@ public class UserController {
 	public ModelAndView mypage(HttpServletRequest request) {
 		session=request.getSession();
 		String id = (String) session.getAttribute("id");
+		
 		UserVO user= userService.selectUser(id);
 		ModelAndView mv = new ModelAndView("mypage");
 		mv.addObject("user",user);
