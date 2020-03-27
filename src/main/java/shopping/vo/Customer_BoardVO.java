@@ -4,8 +4,10 @@ package shopping.vo;
 import java.sql.Timestamp;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Customer_BoardVO {
 	private int customer_id;
 	private String customer_subject;

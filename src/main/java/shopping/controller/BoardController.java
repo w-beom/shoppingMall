@@ -47,6 +47,7 @@ public class BoardController {
 		boardService.deleteBoard(no);
 		return "redirect:/board.do";
 	}
+	
 	@RequestMapping("board_edit.do")
 	public ModelAndView boardEdit(@RequestParam("no") int no) {
 		System.out.println(no);
@@ -55,12 +56,14 @@ public class BoardController {
 		mv.addObject("board",board);
 		return mv;
 	}
+	
 	@RequestMapping("editboard2.do")
 	public String boardEdit(Customer_BoardVO vo) {
 		System.out.println(vo);
 		boardService.editBoard(vo);
 		return "redirect:/boardDetail.do?no="+vo.getCustomer_id();
 	}
+	
 	@RequestMapping("boardsearch.do")
 	public ModelAndView boardsearch(@RequestParam("ch-box")String kind,@RequestParam("search")String search) {
 		List<Customer_BoardVO> vo=null;
