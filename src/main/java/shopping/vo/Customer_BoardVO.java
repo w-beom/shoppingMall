@@ -15,4 +15,6 @@ public class Customer_BoardVO {
 	private String id;
 	private int user_id;
 	private Timestamp customer_date;
+	
+	
 }
